@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+        const group = (words) => {
+            const map = new Map()
+            words.forEach(word => {
+                let key = word.split('').sort().join('')
+                if(!map.has(key)) map.set(key, [])
+                map.get(key).push(word)
+            })
+            return Array.from(map.values())
+        }
+        console.log(group(words))
+    </script>
+</body>
+</html>

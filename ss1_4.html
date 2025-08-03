@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const checkParity = (c) => {
+            if(isNaN(c)) return c + " not is number"
+            return c % 2 == 0 ? `${c} is an even number` : `${c} is odd number`
+        }
+        console.log(checkParity(10))
+    </script>
+</body>
+</html>
